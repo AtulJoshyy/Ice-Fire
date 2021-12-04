@@ -15,16 +15,15 @@ let secretNumber = Math.trunc(Math.random() * 20) + 1;
 checkBtn.addEventListener("click", function () {
   var guessNbr = Number(guess.value);
   console.log(guessNbr, typeof guessNbr);
-
   // IF THE INPUT IS EMPTY
   if (!guessNbr) {
-    message.textContent = "❌ Enter a number dumbass!!";
+    message.textContent = "❌ Enter a number!!";
   }
   // THE PLAYER WINS
   else if (guessNbr === secretNumber) {
     numberHidden.textContent = secretNumber;
-    message.textContent = "🎉 you are fucking awesome!!";
-    body.style.backgroundColor = "rgb(31, 192, 117)"; //green
+    message.textContent = "🎉 you are legend!!";
+    body.style.backgroundColor = "rgb(31, 192, 117)"; 
     numberHidden.classList.add("number-win");
 
     if (scoreNumber > highScoreNumber) {
@@ -42,7 +41,7 @@ checkBtn.addEventListener("click", function () {
       score.textContent = scoreNumber;
     } else {
       numberHidden.textContent = secretNumber;
-      message.textContent = "💩 you are a loser";
+      message.textContent = "💩 loser";
       body.style.backgroundColor = "rgb(189, 52, 52)";
       score.textContent = 0;
     }
